@@ -36,7 +36,6 @@ const DrinksProvider = ({ children }) => {
     async function getDrink (data) {
         try {
             setLoading(true);
-
             const drinksData = await filterDrinksService(data.name, data.category)
             setDrinks(drinksData);
         } catch (error) {
